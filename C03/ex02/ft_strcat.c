@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strncpy.c                                     .::    .:/ .      .::   */
+/*   ft_strcat.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: micferna <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/07/18 01:21:24 by micferna     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/20 19:19:12 by micferna    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/07/20 16:42:57 by micferna     #+#   ##    ##    #+#       */
+/*   Updated: 2019/07/20 17:34:57 by micferna    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char *ft_strcat(char *dest, char *src)
 {
-	unsigned int i;
-
+	int i;
+	
 	i = 0;
-	while (i < n && src[i] != '\0')
+	while (src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-	}
+	dest[i] = '\0';
 	return (dest);
 }
+
