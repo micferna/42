@@ -1,0 +1,8 @@
+Credentials cache: API:57982
+        Principal: micferna@LE-101.FR
+
+  Issued                Expires             Flags    Principal
+Jul  1 17:53:36 2019  Jul  2 03:53:36 2019  FPIA   krbtgt/LE-101.FR@LE-101.FR
+Jul  1 17:53:37 2019  Jul  2 03:53:36 2019  FPA    ldap/ldap-master.le-101.fr@LE-101.FR
+Jul  1 17:53:37 2019  Jul  2 03:53:36 2019  FPA    HTTP/san-ssd.le-101.fr@LE-101.FR
+Jul  1 18:28:17 2019  Jul  2 03:53:36 2019  FPA    host/vogsphere.le-101.fr@LE-101.FR
