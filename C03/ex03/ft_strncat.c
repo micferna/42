@@ -1,47 +1,47 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strcat.c                                      .::    .:/ .      .::   */
+/*   ft_strncat.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: micferna <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/07/20 16:42:57 by micferna     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/21 10:25:46 by micferna    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/07/21 10:27:34 by micferna     #+#   ##    ##    #+#       */
+/*   Updated: 2019/07/21 10:54:24 by micferna    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include <stdio.h>
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strncat(char *dest, char *src, int nb)
 {
-	int a;
+	int chaine;
+	int i;
 
-	a = 0;
+	chaine = -1;
+	while (dest[++chaine]);
 
-	int b;
-
-	b = 0;
-	while (dest[a] != '\0')
-		a++;
-	while (src[a] != '\0')
+	i = 0;
+	while (i < nb)
 	{
-		dest[a] = src[b];
-		a++;
-		b++;
+		dest[chaine] = src[i];
+		i++;
+		chaine++;
 	}
-	dest[a] = '\0';
+	dest[chaine] = '\0';
+
 	return (dest);
 }
 
-int main (void) 
+
+int main()
 {
+	char str[] = "sdfsd";
+	char to_find[] = "asdf";
+	int n = 2;
 
-	char dest[10] = "abc";
-	char src[] = "deboiter";
+	printf("%s", ft_strncat(str, to_find, 2 ));
 
-	ft_strcat(dest, src);
-	printf("%s\n", dest);
-	return (0);
+	return(0);
 }
-
