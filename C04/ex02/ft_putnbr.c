@@ -6,7 +6,7 @@
 /*   By: micferna <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/07/22 00:04:09 by micferna     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/22 11:14:36 by micferna    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/07/22 13:06:39 by micferna    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,7 +21,7 @@ void	ft_putnbr(int nb)
 {
 	if (nb >= 0 && nb <= 9)
 	{
-		ft_putchar (nb + '0');
+		ft_putchar (nb + 48);
 	}
 	else if (nb < 0)
 	{
@@ -30,7 +30,7 @@ void	ft_putnbr(int nb)
 	}
 	else
 	{
-		ft_putchar (nb / 10);
+		ft_putnbr (nb / 10);
 		ft_putnbr (nb % 10);
 	}
 }
