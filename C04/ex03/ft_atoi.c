@@ -1,24 +1,42 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strlen.c                                      .::    .:/ .      .::   */
+/*   ft_atoi.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: micferna <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/07/21 11:24:53 by micferna     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/23 00:51:41 by micferna    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/07/22 23:12:12 by micferna     #+#   ##    ##    #+#       */
+/*   Updated: 2019/07/23 14:09:40 by micferna    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
-int		ft_strlen(char *str)
+#include <stdio.h>
+int		ft_atoi(char *str)
 {
+	int a;
+	int b;
 	int i;
 
+	a = 1;
 	i = 0;
-	while (str[i] != '\0')
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+		i++;
+	while (str[i] == '-' || str[i] == '+')
 	{
+		if (str[i] == '-')
+			a = a * -1;
 		i++;
 	}
-	return (i);
+	b = 0;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		b = b * 10 + (str[i] - '0');
+		i++;
+	}
+	return (b * a);
+}
+
+int main()
+{
+	printf("%d", ft_atoi("      +-----++-+--45785jh554"));
 }
