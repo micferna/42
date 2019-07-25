@@ -6,7 +6,7 @@
 /*   By: micferna <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/07/24 17:19:47 by micferna     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/25 10:41:08 by micferna    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/07/25 10:53:47 by micferna    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -38,9 +38,9 @@ int		main(int argc, char **argv)
 	i = 0;
 	while (argc > 1)
 	{
-		while (argv[argc -1][i] != '\0')
+		while (argv[argc - 1][i] != '\0')
 		{
-			ft_putchar(argv[argc -1][i]);
+			ft_putchar(argv[argc - 1][i]);
 			i++;
 		}
 		ft_putchar('\n');
